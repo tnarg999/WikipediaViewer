@@ -1,0 +1,26 @@
+<head>
+  <title>WikipediaViewer</title>
+</head>
+
+<body>
+  <h1>Wikipedia Viewer</h1>
+  <a href = "https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wikipedia Article</a>
+
+  <form class = "searchQuery">
+      <input type = "text" id = "userQuery">     
+  </form>
+
+  <ul>
+    {{#each results}}
+      {{> result}}
+    {{/each}}
+  </ul>
+
+</body>
+
+<template name="result">
+  <li><a href = "https://en.wikipedia.org/wiki/{{text}}" target="_blank">{{text}}</a></li>
+</template>
+
+
+
